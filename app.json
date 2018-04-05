@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/index",
+    "pages/product/all/index",
+    "pages/product/details/index",
+    "pages/order/all/index",
+    "pages/order/paid/index",
+    "pages/order/unpaid/index",
+    "pages/order/details/index",
+    "pages/cart/cart/index",
+    "pages/cart/edit/index",
+    "pages/footer/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fafafa",
+    "navigationBarTitleText": "韩国艺匠婚纱摄影",
+    "navigationBarTextStyle": "black"
+  }
+}
