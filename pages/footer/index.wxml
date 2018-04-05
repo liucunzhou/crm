@@ -1,0 +1,18 @@
+<template name="foot">
+   <view class="menus_footer">	
+		<view class="menus_box">
+	   	<navigator class="menus" url="/pages/index/index" open-type="reLaunch">
+	   		<view class="icon_1 icon_1_cur"></view>
+	   		<view class="ft_font">推荐</view>
+	   	</navigator>
+	   	<view class="menus" bindtap="callPhone">
+	   		<view class="icon_2"></view>
+	   		<view class="ft_font">在线客服</view>
+	   	</view>
+	   	<navigator class="menus"  url="/pages/order/unpaid/index" open-type="reLaunch">
+	   		<view class="icon_3"></view>
+	   		<view class="ft_font">我的订单</view>
+	   	</navigator>
+	   </view>
+   </view>
+</template>

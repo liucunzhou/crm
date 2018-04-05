@@ -1,0 +1,22 @@
+
+.mod_list{
+    width: 100%
+}
+.check_all{
+    padding-left: 10px;
+}
+.empty_prod{
+  height: 50px;
+  background:white;
+  border-bottom:#ddd solid 1px;
+  text-align: center
+}
+.empty_prod_btn{
+  border:#333 solid 1px;
+  display: inline-block;
+  line-height: 35px;
+  height: 35px;
+  padding:0 20px;
+  margin-top: 5px;
+  border-radius: 2px;
+}

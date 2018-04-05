@@ -1,0 +1,23 @@
+/* pages/login/index.wxss */
+.resetbutton {
+  font-size: 14px;
+  line-height: 54px;
+}
+page{
+  padding: 10px;
+  width: auto;
+}
+.form_boxadd {
+border-top:2px solid #000;
+border-bottom:2px solid #000;
+}
+button::after {
+  width: 0;
+  height: 0;
+  padding:0;
+  margin:0
+}
+.phone_input {
+  padding-left: 10px;
+  text-align: left;
+}

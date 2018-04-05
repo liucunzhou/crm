@@ -1,0 +1,129 @@
+<view class="page ">
+  <view class="swiper-container info_cont" style="height:{{swiperHeight}}px;">
+    <swiper class="swiper_w" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{picList}}" wx:key="item">
+        <swiper-item>
+          <image src="{{item}}" class="best_img_list" mode="widthFix" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="swiper-pagination"></view>
+  </view>
+  <view class="detail_list">
+    <view class="detail_title">{{product.title}}</view>
+    <view class="detail_info">{{product.intro}}</view>
+    <view class="detail_price">¥{{product.price}}</view>
+  </view>
+  <view class="detail_type">
+    <view class="detail_type_bd">套餐介绍</view>
+    <view class="detail_type_list">
+      <view class="detail_type_title">造型
+        <view class="icon_1"></view>
+      </view>
+      <view class="detail_type_info">
+        <view>{{package.model}}</view>
+      </view>
+    </view>
+    <view class="detail_type_list">
+      <view class="detail_type_title">内景
+        <view class="icon_2"></view>
+      </view>
+      <view class="detail_type_info">
+        <view wx:for="{{package.indoor}}" wx:key="item">
+          <view>{{item}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="detail_type_list">
+      <view class="detail_type_title">外景
+        <view class="icon_2"></view>
+      </view>
+      <view class="detail_type_info">
+        <view wx:for="{{package.outdoor}}" wx:key="item">
+          <view>{{item}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="detail_type_list">
+      <view class="detail_type_title">拍摄
+        <view class="icon_3"></view>
+      </view>
+      <view class="detail_type_info">
+        <view>{{package.shoot}}</view>
+      </view>
+    </view>
+    <view class="detail_type_list">
+      <view class="detail_type_title">精修
+        <view class="icon_4"></view>
+      </view>
+      <view class="detail_type_info">
+        <view>{{package.accurate}}</view>
+      </view>
+    </view>
+    <view class="detail_type_list">
+      <view class="detail_type_title">相册包含
+        <view class="icon_2"></view>
+      </view>
+      <view class="detail_type_info">
+        <view wx:for="{{package.album}}" wx:key="item">
+          <view>{{item}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="detail_type_list">
+      <view class="detail_type_title">相框包含
+        <view class="icon_2"></view>
+      </view>
+      <view class="detail_type_info">
+        <view wx:for="{{package.frame}}" wx:key="item">
+          <view>{{item}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="detail_type_list">
+      <view class="detail_type_title">摄影师
+        <view class="icon_5"></view>
+      </view>
+      <view class="detail_type_info">
+        <view>{{package.photographer}}</view>
+      </view>
+    </view>
+    <view class="detail_type_list">
+      <view class="detail_type_title">化妆师
+        <view class="icon_6"></view>
+      </view>
+      <view class="detail_type_info">
+        <view>{{package.dresser}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="set_box">
+    <view wx:for="{{details}}" wx:key="item" class="set_box_pic">
+      <image class="bese_img_box" src="{{item}}" mode="widthFix"></image>
+    </view>
+  </view>
+</view>
+<view class="menus_footer">
+  <view class="shoppingcart_box">
+    <view class="shopping_cart">
+      <view class="menus" bindtap="callPhone">
+        <view class="icon_22"></view>
+        <view class="ft_font">在线客服</view>
+      </view>
+    </view>
+    <view class="buy_btn" bindtap="showAppointment">预约到店</view>
+    <view class="shopping_btn" bindtap="buyIt">立即购买</view>
+  </view>
+</view>
+<view>
+  <view class="mask {{maskDisplay}}" bindtap="hideMask"></view>
+  <view class="book_pop {{myanimate}}" style="bottom:{{bottom}}">
+    <view class="book_box">
+      <view class="phone_title">请输入您的手机号</view>
+      <view class="book_phone">
+        <input type="text" placeholder="{{mobile}}" bindinput="mobileInput" maxlength="11" confirm-type="done"/>
+      </view>
+      <view class="book_btn" bindtap="appointment">立即预约</view>
+    </view>
+  </view>
+</view>

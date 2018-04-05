@@ -1,0 +1,76 @@
+<view class="page page2">
+  <view style="display: none">
+    <view class="nothing_pic"></view>
+    <view class="nothing_font">这里什么都没有呀</view>
+    <navigator href="" class="go_btn">去逛逛嘉豪</navigator>
+  </view>
+  <view class="checkbox_box">
+    <view class="check_all" bindchange="selecAll">
+      <view class="check_box_btn check_box_cur"></view>全选</view>
+    <view class="shopping_edite">完成</view>
+  </view>
+  <view class="mod_list">
+    <view class="mod_type">
+      <view class="mod_check">
+        <view class="check_box_btn check_box_cur"></view>
+      </view>
+      <view class="mod_pic">
+        <image class="best_img_list" src="../../images/pic2.jpg"></image>
+      </view>
+      <view class="mod_info" style="display: block">
+        <view class="mod_title">THE BSET</view>
+        <view class="mod_font">专为母亲节特别定制的枪炮鲜花花盒</view>
+        <view class="mod_pirce pic_pirce">¥520.00
+          <view class="mod_nums">X1</view>
+        </view>
+      </view>
+      <view class="mod_info" style="display: none">
+        <view class="edit_box">
+          <view class="minus"></view>
+          <input type="" name="" class="numtext" />
+          <view class="plus"></view>
+        </view>
+      </view>
+    </view>
+    <view class="mod_type">
+      <view class="mod_check">
+        <view class="check_box_btn check_box_cur"></view>
+      </view>
+      <view class="mod_pic">
+        <image class="best_img_list" src="../../images/pic2.jpg"></image>
+      </view>
+      <view class="mod_info" style="display: none">
+        <view class="mod_title">THE BSET</view>
+        <view class="mod_font">专为母亲节特别定制的枪炮鲜花花盒</view>
+        <view class="mod_pirce pic_pirce">¥520.00
+          <view class="mod_nums">X1</view>
+        </view>
+      </view>
+      <view class="mod_info">
+        <view class="edit_box">
+          <view class="minus"></view>
+          <input type="" name="" class="numtext" />
+          <view class="plus"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="order_box" style="display: none;">
+    <view class="shoppingcart_box">
+      <view class="shopping_cart">
+
+      </view>
+      <button class="shopping_btn delt_btn">删除</button>
+    </view>
+  </view>
+  <view class="order_box" style="display: block;">
+    <view class="shoppingcart_box">
+      <view class="shopping_cart">
+        <view class="total_price">总计：
+          <view class="price_color">¥520.00 </view>
+        </view>
+      </view>
+      <button class="shopping_btn">结算(1)</button>
+    </view>
+  </view>
+</view>

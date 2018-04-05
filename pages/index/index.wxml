@@ -1,0 +1,62 @@
+<navigator class="bese_img_box" url="../product/details/index?id={{hot.id}}" open-type="navigateTo">
+  <view class="best_img">
+    <image class="best_img_list1" src="{{hot.titlepic}}" mode="widthFix"></image>
+  </view>
+  <view class="talk_box">
+    <view class="yh_1"></view>
+    <view class="talk_info">
+      <view class="talk_p">{{hot.title}}</view>
+      <view class="talk_p">{{hot.intro}}</view>
+    </view>
+    <view class="yh_2"></view>
+  </view>
+</navigator>
+<view class="page ">
+  <view class="recommend_box">
+    <view class="recommend_title">recommend</view>
+    <view class="recommend_info">
+      <view class="tj_title">本期推荐</view>
+      <view class="swiper-container">
+
+        <scroll-view class="scroll-view_H" scroll-x="true" scroll-left="50" style="width: 100%">
+          <view class="scroll-view-item_H bc_green" wx:for="{{recommend}}" wx:key="item">
+            <navigator url="/pages/product/details/index?id={{item.id}}" open-type="navigateTo">
+              <view class="images_b">
+                <image src="{{item.titlepic}}" class="best_img_list" mode="widthFix"></image>
+              </view>
+            </navigator>
+            <view class="pic_title">
+              <navigator class="pic_title_a" url="/pages/product/details/index?id={{item.id}}" open-type="navigateTo">{{item.title}}</navigator>
+            </view>
+            <view class="pic_info">
+              <navigator class="pic_title_a" url="/pages/product/details/index?id={{item.id}}" open-type="navigateTo">{{item.desc}}</navigator>
+            </view>
+            <view class="pic_pirce">
+              <navigator url="/pages/product/details/index?id={{item.id}}" open-type="navigateTo">
+                {{item.price}}
+              </navigator>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>
+<view name="foot">
+   <view class="menus_footer">	
+		<view class="menus_box">
+	   	<view class="menus menuscur" open-type="reLaunch">
+	   		<view class="icon_1"></view>
+	   		<view class="ft_font">推荐</view>
+	   	</view>
+	   	<view class="menus" bindtap="callPhone">
+	   		<view class="icon_2"></view>
+	   		<view class="ft_font">在线客服</view>
+	   	</view>
+	   	<navigator class="menus"  url="/pages/order/unpaid/index" open-type="reLaunch">
+	   		<view class="icon_3"></view>
+	   		<view class="ft_font">我的订单</view>
+	   	</navigator>
+	   </view>
+   </view>
+</view>

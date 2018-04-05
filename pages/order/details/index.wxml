@@ -1,0 +1,61 @@
+<view class="page page2">
+  <view wx:if="{{order.status == '0'}}" class="orderdetail_hd">
+    <view class="nobuy_p">
+      <view class="nobuy_icon"></view>待支付
+    </view>
+    <view class="order_time">你的订单还未支付，订单将在30分00秒后取消</view>
+  </view>
+  <view wx:else class="orderdetail_hd">
+    <view class="nobuy_p">
+      <view class="nobuy_icon"></view>已支付
+    </view>
+  </view>
+  <view class="order_mod">
+    <view class="order_title">订单信息</view>
+    <view class="order_bd">
+      <view>订单号：{{order.out_trade_no}}</view>
+      <view>下单时间：{{order.create_time}}</view>
+    </view>
+  </view>
+  <view class="order_mod">
+    <view class="order_title">商品信息</view>
+    <view class="order_bd">
+      <navigator url="/pages/product/details/index?id={{product.id}}">
+        <view class="mod_list order_list">
+          <view class="mod_type order_type">
+            <view class="mod_pic order_pic">
+              <image class="best_img_list" src="{{product.titlepic}}"></image>
+            </view>
+            <view class="mod_info order_list">
+              <view>{{product.title}}</view>
+              <view>{{product.intro}}</view>
+            </view>
+            <view class="order_price">
+              <view class="block_mod">¥{{product.price}} </view>
+              <view class="block_mod">X1</view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <view class="order_de_mod">
+      <view class="det_name">订单总额</view>
+      <view class="det_vale">¥{{order.price}} </view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{order.status == '0'}}" class="order_box order_box_add">
+  <view class="shoppingcart_box">
+    <view class="shopping_cart">
+      <view class="total_price">应付金额：
+        <view class="price_color">¥{{order.price}} </view>
+      </view>
+    </view>
+    <button class="buy_btns buy_btns_add" data-id="{{order.id}}" bindtap="payment">去支付</button>
+  </view>
+</view>
+<view wx:else>
+  <import src="/pages/footer/index.wxml" />
+  <template is="foot" />
+</view>

@@ -1,0 +1,13 @@
+/* pages/order/unpaid/index.wxss */
+.prod_title{
+  width: 100%;
+        white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.prod_intro{
+    width: 100%;
+      white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

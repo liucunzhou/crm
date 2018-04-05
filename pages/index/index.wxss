@@ -1,0 +1,46 @@
+.images_b {
+  width: 115px;
+  height: 129px;
+  overflow: hidden;
+}
+
+.images_b .best_img_list {
+  height: 100%;
+}
+
+.scroll-view_H {
+  height: 190px;
+  white-space: nowrap;
+  display: flex;
+  overflow: auto;
+}
+
+.scroll-view-item_H {
+  height: 190px;
+  width: 115px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.bese_img_box {
+  margin: 8% 8% 0 8%;
+}
+
+.best_img_list1 {
+  width: 100%;
+  height: 400px;
+  display: block;
+}
+
+.best_img {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 100%;
+}

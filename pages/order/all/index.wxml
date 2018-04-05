@@ -1,0 +1,48 @@
+<view class="page page2">
+	<view>
+		<view class="mod_list order_list">
+			<view class="mod_type order_type">
+				<view class="mod_pic order_pic"><image class="best_img_list" src="../../../images/pic2.jpg"></image></view>
+				<view class="mod_info order_list">
+					<view>THE BEST</view>
+					<view>专为母亲节特别定制的枪炮鲜花花盒</view>
+				</view>
+				<view class="order_price">
+					<view class="block_mod">¥520.00 </view>
+					<view class="block_mod">X1</view>
+				</view>
+			</view>
+		</view>
+		<view>
+			<view class="col_box">
+				<view class="coupons_box">
+					<view class="coupons_title">优惠券</view>
+					<view class="coupons_type">
+						<view class="coupons_font">不使用优惠券</view>
+					</view>
+				</view>
+				<view class="coupons_box">
+					<input type="" name="" class="exchange_ipt" placeholder="请输入优惠券码"/>
+					<button class="exchange_btn">兑换</button>
+				</view>
+			</view>
+			<view class="col_box">
+				<view class="goods_box">
+					<view class="goods_tatol">商品总额</view>
+					<view class="tatol_price">¥520.00</view>
+				</view>
+			</view>
+			<view class="order_tips">
+				<view>温馨提示：提交订单后，请于30分钟之内完成支付，超过30分钟，系统则自动取消订单。</view>
+			</view>
+		</view>
+	</view>
+	<view class="order_box order_box_add">
+			<view class="shoppingcart_box">
+				<view class="shopping_cart">
+					<view class="total_price">需支付：<view class="price_color">¥520.00 </view></view>
+				</view>
+				<button class="shopping_btn">提交订单</button>
+			</view>
+		</view>
+</view>

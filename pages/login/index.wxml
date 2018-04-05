@@ -1,0 +1,26 @@
+<view class="top_logo">
+  <image src="{{userInfo.avatarUrl}}"></image>
+</view>
+<view class="accredit">为了方便客服与您第一时间取得联系,请留下您的手机号~</view>
+<view class="head_box">
+  <view class="hd_pic">
+    <image src="{{userInfo.avatarUrl}}"></image>
+  </view>
+  <view class="hd_name">{{userInfo.nickName}}</view>
+</view>
+<view class="form_boxadd">
+  <view class="ipt_list">
+    <input value="+86" class="quhao_input"/>
+    <input type="number" placeholder="请输入手机号" class="phone_input" id="mobile" bindinput="mobileInput" maxlength="11"/>
+    <!--
+    <view class="closed">
+      <view class="closed_icon">X</view>
+    </view>
+    -->
+  </view>
+  <view class="ipt_list">
+    <input type="number" placeholder="请输入验证码" class="phone_input" bindinput="codeInput" maxlength="4"/>
+    <button class="resetbutton" bindtap="getMobileCode">{{VerifyCode}}</button>
+  </view>
+</view>
+<button class="sendcode" bindtap="checkMobileCode">验证手机号</button>

@@ -1,0 +1,70 @@
+<view class="page page2">
+  <view class="myhd">
+    <view class="myhd_top">
+      <view class="hd_pic">
+        <image class="best_img_list" src="{{userInfo.avatarUrl}}"></image>
+      </view>
+      <view class="hd_name">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view class="order_tabhd">
+    <navigator class="navigator" url="/pages/order/unpaid/index" open-type="reLaunch">
+      待支付
+    </navigator>
+    <navigator class="navigator cur" url="/pages/order/paid/index" open-type="reLaunch">
+      已完成
+    </navigator>
+  </view>
+  <view class="width_100" wx:for="{{orderList}}" wx:key="item" wx:for-item="order">
+    <view class="col_box">
+      <view class="goods_box nobuy_box">
+        <view class="goods_tatol">{{order.create_time}}</view>
+        <view class="tatol_price color_font">已支付</view>
+      </view>
+    </view>
+    <navigator url="/pages/product/details/index?id={{order.product.id}}">
+      <view class="mod_list order_list">
+        <view class="mod_type order_type">
+          <view class="mod_pic order_pic">
+            <image class="best_img_list" src="{{order.product.titlepic}}"></image>
+          </view>
+          <view class="mod_info order_list">
+            <view>{{order.product.title}}</view>
+            <view>{{order.product.intro}}</view>
+          </view>
+          <view class="order_price">
+            <view class="block_mod">¥{{order.price}}</view>
+            <view class="block_mod">X1</view>
+          </view>
+        </view>
+      </view>
+    </navigator>
+    <view class="total_goods">
+      <view>
+        <view>共1件商品，共计</view>¥{{order.price}}</view>
+    </view>
+    <view class="total_goods">
+      <navigator url="/pages/order/details/index?id={{order.id}}" open-type="navigateTo" class="viewdetails_btns">
+        查看详情
+      </navigator>
+    </view>
+  </view>
+
+  <view class="nomoreorder">没有更多订单了</view>
+</view>
+<view class="menus_footer">
+  <view class="menus_box">
+    <navigator class="menus" url="/pages/index/index" open-type="reLaunch">
+      <view class="icon_1"></view>
+      <view class="ft_font">推荐</view>
+    </navigator>
+    <view class="menus" bindtap="callPhone">
+      <view class="icon_2"></view>
+      <view class="ft_font">在线客服</view>
+    </view>
+    <navigator class="menus menuscur" url="/pages/order/unpaid/index" open-type="reLaunch">
+      <view class="icon_3"></view>
+      <view class="ft_font">我的订单</view>
+    </navigator>
+  </view>
+</view>
